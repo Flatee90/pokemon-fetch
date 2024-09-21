@@ -6,8 +6,8 @@ let outputDiv = document.getElementById("pokemon-output");
 async function handleFetch() {
     console.log("Hello Pokemon Trainer!");
     let pokemoncode = PokemonInput.value; 
-    let response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemoncode}`);
-    let data = await response.json();
+    let result = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemoncode}`);
+    let data = await result.json();
     console.log(data);
     let pokemonName = data.name;
     let pokemonIndex = data.game_indices[0].game_index;
